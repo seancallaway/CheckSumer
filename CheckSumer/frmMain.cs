@@ -35,8 +35,8 @@ namespace CheckSumer
                 string noPath = file.Substring(slashPos + 1, file.Length - slashPos - 1);
                 lblFilename.Text = noPath;
                 txtMD5.Text = GetMD5(file);
-                lblSHA1.Text = GetSHA1(file);
-                lblSHA256.Text = GetSHA256(file);
+                txtSHA1.Text = GetSHA1(file);
+                txtSHA256.Text = GetSHA256(file);
             }
         }
 
@@ -142,8 +142,8 @@ namespace CheckSumer
         {
             lblFilename.Text = string.Empty;
             txtMD5.Text = string.Empty;
-            lblSHA1.Text = string.Empty;
-            lblSHA256.Text = string.Empty;
+            txtSHA1.Text = string.Empty;
+            txtSHA256.Text = string.Empty;
         }
     }
 }
