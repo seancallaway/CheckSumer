@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblSHA256 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblSHA1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblMD5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFilename = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lnkAbout = new System.Windows.Forms.LinkLabel();
             this.lblDrop = new System.Windows.Forms.Label();
+            this.txtMD5 = new System.Windows.Forms.TextBox();
+            this.txtSHA1 = new System.Windows.Forms.TextBox();
+            this.txtSHA256 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblSHA256);
+            this.groupBox1.Controls.Add(this.txtSHA256);
+            this.groupBox1.Controls.Add(this.txtSHA1);
+            this.groupBox1.Controls.Add(this.txtMD5);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.lblSHA1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.lblMD5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblFilename);
             this.groupBox1.Controls.Add(this.label1);
@@ -59,16 +59,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "File Information:";
-            // 
-            // lblSHA256
-            // 
-            this.lblSHA256.AutoSize = true;
-            this.lblSHA256.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSHA256.Location = new System.Drawing.Point(8, 172);
-            this.lblSHA256.Name = "lblSHA256";
-            this.lblSHA256.Size = new System.Drawing.Size(43, 13);
-            this.lblSHA256.TabIndex = 7;
-            this.lblSHA256.Text = "label3";
             // 
             // label5
             // 
@@ -80,16 +70,6 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "SHA-256 Checksum:";
             // 
-            // lblSHA1
-            // 
-            this.lblSHA1.AutoSize = true;
-            this.lblSHA1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSHA1.Location = new System.Drawing.Point(6, 126);
-            this.lblSHA1.Name = "lblSHA1";
-            this.lblSHA1.Size = new System.Drawing.Size(43, 13);
-            this.lblSHA1.TabIndex = 5;
-            this.lblSHA1.Text = "label3";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -99,16 +79,6 @@
             this.label4.Size = new System.Drawing.Size(109, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "SHA-1 Checksum:";
-            // 
-            // lblMD5
-            // 
-            this.lblMD5.AutoSize = true;
-            this.lblMD5.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMD5.Location = new System.Drawing.Point(7, 80);
-            this.lblMD5.Name = "lblMD5";
-            this.lblMD5.Size = new System.Drawing.Size(43, 13);
-            this.lblMD5.TabIndex = 3;
-            this.lblMD5.Text = "label3";
             // 
             // label2
             // 
@@ -176,6 +146,42 @@
             this.lblDrop.DragOver += new System.Windows.Forms.DragEventHandler(this.lblDrop_DragOver);
             this.lblDrop.DragLeave += new System.EventHandler(this.lblDrop_DragLeave);
             // 
+            // txtMD5
+            // 
+            this.txtMD5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMD5.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMD5.Location = new System.Drawing.Point(10, 80);
+            this.txtMD5.Name = "txtMD5";
+            this.txtMD5.ReadOnly = true;
+            this.txtMD5.Size = new System.Drawing.Size(388, 13);
+            this.txtMD5.TabIndex = 8;
+            this.txtMD5.TabStop = false;
+            this.txtMD5.Text = "label3";
+            // 
+            // txtSHA1
+            // 
+            this.txtSHA1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSHA1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSHA1.Location = new System.Drawing.Point(10, 126);
+            this.txtSHA1.Name = "txtSHA1";
+            this.txtSHA1.ReadOnly = true;
+            this.txtSHA1.Size = new System.Drawing.Size(388, 13);
+            this.txtSHA1.TabIndex = 9;
+            this.txtSHA1.TabStop = false;
+            this.txtSHA1.Text = "label3";
+            // 
+            // txtSHA256
+            // 
+            this.txtSHA256.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSHA256.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSHA256.Location = new System.Drawing.Point(10, 172);
+            this.txtSHA256.Name = "txtSHA256";
+            this.txtSHA256.ReadOnly = true;
+            this.txtSHA256.Size = new System.Drawing.Size(388, 13);
+            this.txtSHA256.TabIndex = 10;
+            this.txtSHA256.TabStop = false;
+            this.txtSHA256.Text = "label3";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,17 +206,17 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblSHA256;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblSHA1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblMD5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblFilename;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel lnkAbout;
         private System.Windows.Forms.Label lblDrop;
+        private System.Windows.Forms.TextBox txtMD5;
+        private System.Windows.Forms.TextBox txtSHA256;
+        private System.Windows.Forms.TextBox txtSHA1;
     }
 }
 
